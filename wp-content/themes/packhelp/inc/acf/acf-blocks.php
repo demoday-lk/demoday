@@ -32,5 +32,14 @@ function my_acf_init_block_types() {
             'mode'              => 'edit',
             'keywords'          => array( 'numbers' ),
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'latest-products',
+            'title'             => __('Latest products'),
+            'description'       => __('An latest-products callout block.'),
+            'render_template'   => 'template-parts/blocks/latest-products/latest-products.php',
+            'mode'              => 'edit',
+            'keywords'          => array( 'latest-products' ),
+        ));
     }
 }
