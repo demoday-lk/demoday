@@ -14,3 +14,5 @@ if (defined('WEBPACK_SERVER')) {
 
 include 'inc/add-theme-support.php';
 include 'inc/register-nav-menus.php';
+include 'inc/acf/acf-blocks.php';
+include 'inc/register_post_type.php';

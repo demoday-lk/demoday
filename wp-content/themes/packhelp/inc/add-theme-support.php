@@ -7,3 +7,5 @@ add_theme_support('custom-logo', array(
     'flex-width' => true,
     'header-text' => array(get_bloginfo('name'), get_bloginfo('description')),
 ));
+
+add_theme_support( 'post-thumbnails' );

@@ -5,7 +5,6 @@ $custom_logo = wp_get_attachment_image_src( $custom_logo_id , 'full' )[0];
 
 ?>
 
-<!-- Start Top Bar -->
 <div class="title-bar" data-responsive-toggle="mainNavigation" data-hide-for="medium">
     <div class="title-bar-left">
         <button class="menu-icon" type="button" data-toggle="mainNavigation"></button>
@@ -24,4 +23,3 @@ $custom_logo = wp_get_attachment_image_src( $custom_logo_id , 'full' )[0];
         </ul>
     </div>
 </div>
-<!-- End Top Bar -->
