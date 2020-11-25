@@ -11,3 +11,5 @@ if (defined('WEBPACK_SERVER')) {
         wp_enqueue_style('main-css');
     });
 }
+
+include 'inc/add-theme-support.php';
