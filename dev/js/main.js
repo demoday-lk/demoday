@@ -1,7 +1,11 @@
 // import some js
 import './module';
+import VueComponents from './vue';
 
 // import some scss
 import './../scss/main.scss';
 
-console.log('main.js');
+document.addEventListener("DOMContentLoaded", ()=> {
+    const vue = new VueComponents();
+    vue.init();
+});
