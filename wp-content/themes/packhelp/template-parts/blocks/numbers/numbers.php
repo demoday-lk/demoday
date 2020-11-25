@@ -20,7 +20,7 @@ $numbers = get_field('numbers');
                 <? foreach ($numbers as $item) : ?>
                     <li>
                         <? if ($item['link']) : ?>
-                            <a href="<?= $item['link']['url'] ?>">
+                            <a href="<?= $item['link'] ?>">
                                 <? if ($item['number']) : ?>
                                     <div class="stat"><?= $item['number'] ?></div>
                                 <? endif ?>
