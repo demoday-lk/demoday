@@ -1,5 +1,6 @@
 <?php
 
 register_nav_menus( array(
-    'primary' => 'Primary Navigation'
+    'primary' => 'Primary Navigation',
+    'secondary' => 'Secondary Navigation'
 ));

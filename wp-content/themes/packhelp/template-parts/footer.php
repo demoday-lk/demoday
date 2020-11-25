@@ -1,17 +1,24 @@
+<?php
+
+$copyright_text = get_field('copyright_text', 'option');;
+
+?>
+
 <footer>
     <div class="grid-x callout">
 
         <div class="small-12 medium-6 cell">
             <ul class="menu">
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <?= wp_nav_menu( array( 'theme_location' => 'secondary' ) ) ?>
             </ul>
         </div>
 
-        <div class="small-12 medium-6 cell">
-            <ul class="menu align-right">
-                <li class="menu-text">Copyright © 2020 Hello World Company</li>
-            </ul>
-        </div>
+        <? if ($copyright_text) : ?>
+            <div class="small-12 medium-6 cell">
+                <ul class="menu align-right">
+                    <li class="menu-text"><?= $copyright_text ?></li>
+                </ul>
+            </div>
+        <? endif ?>
     </div>
 </footer>
