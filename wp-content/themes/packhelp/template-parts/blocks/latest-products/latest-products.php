@@ -9,14 +9,23 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-$title = get_field('title');
-$product_button_text = get_field('product_button_text');
+$title = get_field('title') ? get_field('title') : 'Other products:' ;
+$product_button_text = get_field('product_button_text') ? get_field('product_button_text') : 'Buy Now';
+$posts_amount = $args['amount'] ? $args['amount'] : 9;
+$tax_query = $args['categories'] ? [
+    [
+        'taxonomy' => 'category',
+        'terms' => implode(',', $args['categories']),
+    ],
+] : false;
 
 $products = get_posts(array(
-        'numberposts' => 9,
+        'numberposts' => $posts_amount,
         'orderby' => 'date',
         'order' => 'DESC',
         'post_type' => 'product',
+        'tax_query' => $tax_query,
+        'exclude' => array(get_the_id()),
     )
 );
 
@@ -30,7 +39,7 @@ $products = get_posts(array(
     </div>
 
     <? if ($products) : ?>
-        <div class="grid-x grid-margin-x small-up-1 medium-up-3">
+        <div class="grid-x grid-margin-x <?= ($args['classes']) ? $args['classes'] : 'small-up-1 medium-up-3' ?>">
 
             <? foreach ($products as $product) : ?>
 
