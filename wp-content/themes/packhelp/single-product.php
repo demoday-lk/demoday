@@ -4,6 +4,8 @@ get_header();
 
 $post_id = get_the_ID();
 $thumbnail = get_the_post_thumbnail_url($post_id);
+$price = get_field('price');
+$sizes = get_field('sizes');
 
 ?>
 
@@ -18,7 +20,16 @@ $thumbnail = get_the_post_thumbnail_url($post_id);
                 <h3><?= the_title() ?></h3>
                 <p><?= the_content() ?></p>
 
-                    <? get_template_part('template-parts/social-share'); ?>
+                <? if ($sizes) : ?>
+                    <div id="vue-calculator"
+                         price='<?= $price ?>'
+                         sizes='<?= json_encode($sizes) ?>'
+                    ></div>
+                <? endif ?>
+
+                <a href="#" class="button large expanded">Buy Now</a>
+
+                <? get_template_part('template-parts/social-share'); ?>
 
             </div>
         </div>
