@@ -9,11 +9,10 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-$data = $block['data'];
-$title = $data['title'];
-$description = $data['description'];
-$cta_primary = $data['cta_primary'];
-$cta_secondary = $data['cta_secondary'];
+$title = get_field('title');
+$description = get_field('description');
+$cta_primary = get_field('cta_primary');
+$cta_secondary = get_field('cta_secondary');
 
 ?>
 

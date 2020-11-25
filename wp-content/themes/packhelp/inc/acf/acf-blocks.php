@@ -14,5 +14,14 @@ function my_acf_init_block_types() {
             'mode'              => 'edit',
             'keywords'          => array( 'callout' ),
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'about-us',
+            'title'             => __('About Us'),
+            'description'       => __('An about us callout block.'),
+            'render_template'   => 'template-parts/blocks/about-us/about-us.php',
+            'mode'              => 'edit',
+            'keywords'          => array( 'about-us' ),
+        ));
     }
 }
