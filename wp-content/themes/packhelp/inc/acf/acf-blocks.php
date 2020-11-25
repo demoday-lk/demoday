@@ -23,5 +23,14 @@ function my_acf_init_block_types() {
             'mode'              => 'edit',
             'keywords'          => array( 'about-us' ),
         ));
+
+        acf_register_block_type(array(
+            'name'              => 'numbers',
+            'title'             => __('Numbers'),
+            'description'       => __('An numbers callout block.'),
+            'render_template'   => 'template-parts/blocks/numbers/numbers.php',
+            'mode'              => 'edit',
+            'keywords'          => array( 'numbers' ),
+        ));
     }
 }

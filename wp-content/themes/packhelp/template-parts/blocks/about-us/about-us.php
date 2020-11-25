@@ -39,7 +39,7 @@ $what_we_do = get_field('what_we_do');
     <? if ($what_we_do) : ?>
         <div class="grid-x grid-margin-x">
 
-            <? foreach ($what_we_do as &$item) : ?>
+            <? foreach ($what_we_do as $item) : ?>
                 <div class="medium-4 cell">
                     <? if ($item['title']) : ?>
                         <h3><?= $item['title'] ?></h3>
