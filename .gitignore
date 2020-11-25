@@ -11,3 +11,4 @@ wp-config.php
 
 #wp-plugins
 wp-content/plugins/advanced-custom-fields-pro/
+wp-content/plugins/query-monitor/
