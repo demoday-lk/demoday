@@ -1,3 +1,5 @@
+        <?php get_template_part('template-parts/footer'); ?>
+
         <?php wp_footer(); ?>
 
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
