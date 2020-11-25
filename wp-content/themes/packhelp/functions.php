@@ -13,3 +13,4 @@ if (defined('WEBPACK_SERVER')) {
 }
 
 include 'inc/add-theme-support.php';
+include 'inc/register-nav-menus.php';

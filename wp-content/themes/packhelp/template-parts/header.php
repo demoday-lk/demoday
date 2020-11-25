@@ -20,9 +20,7 @@ $custom_logo = wp_get_attachment_image_src( $custom_logo_id , 'full' )[0];
     <div class="top-bar-left">
         <ul class="menu vertical medium-horizontal">
             <li class="hide-for-small-only"><img src="<?= $custom_logo ?>"  height="38" width="130" alt="company logo"></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Blog</a></li>
+            <?= wp_nav_menu( array( 'theme_location' => 'primary' ) ) ?>
         </ul>
     </div>
 </div>
