@@ -9,6 +9,9 @@ vcs.xml
 #wp
 wp-config.php
 
+#wp-content
+wp-content/uploads/*
+
 #wp-plugins
 wp-content/plugins/advanced-custom-fields-pro/
 wp-content/plugins/query-monitor/
